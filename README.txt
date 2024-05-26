@@ -32,7 +32,7 @@ Sit back and relax as the script works its magic. Once complete, kickstart your 
 
 Pro Tips:
 
-Activate Internet Explorer in Windows for seamless data retrieval from the API.
+----
 Keep the magic alive by considering a small donation to support ongoing development.
 Donation Details:
 
