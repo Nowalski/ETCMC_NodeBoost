@@ -201,6 +201,15 @@ function Write-Files {
 function Open-FirewallPorts {
     Log-Message "Checking and opening firewall ports if needed..."
     $ports = @(30303, 8545, 8546)
+
+    # Read the current port
+    $customPort, $folderPath = Read-CurrentPort
+
+    # Add the custom port to the list of ports to be opened
+    if ($customPort -ne 30303) {
+        $ports += [int]$customPort
+    }
+
     foreach ($port in $ports) {
         $tcpRuleName = "Open TCP Port $port"
         $udpRuleName = "Open UDP Port $port"
